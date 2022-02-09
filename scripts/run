@@ -103,7 +103,7 @@ get_servers () {
             echo "$(date): Fetching and verifying modern PIA server list"
             tmp_allow_host "serverlist.piaservers.net" 443
             SERVERLIST=$(curl --silent --show-error --max-time $CURL_MAX_TIME --resolve "serverlist.piaservers.net:443:$IP" \
-                "https://serverlist.piaservers.net/vpninfo/servers/new")
+                "https://serverlist.piaservers.net/vpninfo/servers/v6")
             verify_serverlist
         fi
 
